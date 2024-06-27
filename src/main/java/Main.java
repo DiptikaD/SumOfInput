@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created by iyasuwatts on 10/17/17.
  * Modified by kristofer in Jan 2024
@@ -6,33 +8,52 @@ public class Main {
 
     public static void main(String[] args){
         
+        //int number = getInputNumber();
+        
+        //int sum = sumOfNumbers(number);
+
+
+        //System.out.println(sum);
+
+
         int number = getInputNumber();
-        
-        int sum = sumOfNumbers(number);
-        
+
+        int sum = getSumOfNumbers(number);
+
         System.out.println(sum);
 
     }
     
     // do this one and the lab is complete. really.
     // return the sum of 0 to n... if n == 3, the result should be 6
-    int sumOfNumbers(int n) {
-        return 0;
-    }
+    //int sumOfNumbers(int n) {
+      //  return 0;
+    //}
     
     
-    int getInputNumber() { // gee, may thi sis useful in another lab?
+    public static int getInputNumber() { // gee, may thi sis useful in another lab?
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter any number: ");
 
         // This method reads the number provided using keyboard
-        int num = scan.nextInt();
+        int n = scan.nextInt();
 
         // Closing Scanner after the use
         scan.close();
-        return num;
+        return n;
     }
-    
+
+    public static int getSumOfNumbers(int n){
+        int sum = 0;
+        if (n <= 0){
+            System.out.println("Try again with a positive number!!!");
+        } else {
+            for(int i = n; n>=1; n--){
+                sum += n;
+            }
+        }
+        return sum;
+    }
     
     
     // for Extra Credit
